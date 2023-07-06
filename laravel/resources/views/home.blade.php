@@ -24,7 +24,7 @@
                             <input type="date" class="datepicker-input" name="enddate">
                         </div>
                         <div class="col-4 pt-3">
-                            <button class="btn btn-dark" id="checkavailabilty">Check availibility</button>
+                            <button class="btn btn-dark" type="submit" id="checkavailability">Check availability</button>
                         </div>
                     </div>
                 </form>
@@ -32,3 +32,9 @@
         </div>
     </div>
 @endsection
+<?php
+// if (isset($_GET['startdate'])) {
+//     $startdate = $_GET['startdate'];
+//     echo $startdate;
+// }
+?>

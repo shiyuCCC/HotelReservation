@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+//shows the list of reservations
+// Route::get('/', 'App\Http\Controllers\ReservationController@index')->name('home');
