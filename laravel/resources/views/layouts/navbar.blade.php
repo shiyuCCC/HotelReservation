@@ -9,12 +9,15 @@
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ url('home') }}">Home
+                    <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home
                         <span class="sr-only sr-only-focusable">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/create') }}">Reservations</a>
+                    <a class="nav-link" href="{{ url('/reservation') }}">Reservations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/roomlist') }}">Rooms</a>
                 </li>
 
             </ul>

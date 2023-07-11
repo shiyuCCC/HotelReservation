@@ -13,5 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//shows the list of reservations
-// Route::get('/', 'App\Http\Controllers\ReservationController@index')->name('home');
+// shows the list of reservations
+Route::get('/', 'App\Http\Controllers\ReservationController@home')->name('home');
+
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+Route::get('/checkroom', 'App\Http\Controllers\RoomController@index')->name('checkroom');
+
+Route::get('/reservation', 'App\Http\Controllers\ReservationController@index')->name('reservation');
+
+Route::get('/create/{id}', 'App\Http\Controllers\ReservationController@create')->name('create');
+
+Route::post('/store', 'App\Http\Controllers\ReservationController@store')->name('store');
+
+Route::delete('/delete/{id}', 'App\Http\Controllers\ReservationController@delete')->name('delete');
+
+Route::get('/roomlist', 'App\Http\Controllers\RoomController@showlist')->name('roomlist');
+
+Route::post('/upload', 'App\Http\Controllers\RoomController@upload')->name('upload');
+
+Route::delete('/deleteroom/{id}', 'App\Http\Controllers\RoomController@delete')->name('deleteroom');
+
+Route::get('/checkweather', 'App\Http\Controllers\WeatherController@check')->name('checkweather');

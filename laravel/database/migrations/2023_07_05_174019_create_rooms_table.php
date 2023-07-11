@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('room_type', ['Single', 'Double', 'Suite']);
+            $table->enum('room_type', ['Single', 'Double', 'Suite', 'King', 'Deluxe room', 'President Suite']);
             $table->enum('capacity', ['1', '2', '3', '4', '5', '6']);
             $table->string('img_url');
             $table->decimal('price_per_night', 8, 2);
