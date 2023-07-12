@@ -1,7 +1,7 @@
 <!--navbar -->
 <nav class="navbar navbar-expand-lg" id="navbar-bg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Wander Hotel</a>
+        <a class="navbar-brand" href="{{ url('/') }}">Wander Hotel</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,10 +21,10 @@
                 </li>
 
             </ul>
-            <form class="d-flex" role="search">
+            {{-- <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </form> --}}
         </div>
     </div>
 </nav>

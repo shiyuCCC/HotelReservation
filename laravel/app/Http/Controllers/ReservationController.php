@@ -32,6 +32,7 @@ class ReservationController extends Controller
             'roomid' => 'required|integer|exists:rooms,id',
             'customername' => 'required|string|regex:/^[\pL\s\-]+$/u', //allows alphabetic characters and spaces
             'email' => 'required|email',
+            'phone' => 'required|regex:/^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/',
             'numpeople' => 'required|integer|min:1',
             'checkindate' => 'required|date',
             'checkoutdate' => 'required|date|after_or_equal:checkindate',
@@ -41,6 +42,7 @@ class ReservationController extends Controller
         $reservation->room_id = $request->roomid;
         $reservation->customer_name = $request->customername;
         $reservation->email = $request->email;
+        $reservation->phone = $request->phone;
         $reservation->num_people = $request->numpeople;
         $reservation->check_in_date = $request->checkindate;
         $reservation->check_out_date = $request->checkoutdate;

@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 // shows the list of reservations
 Route::get('/', 'App\Http\Controllers\ReservationController@home')->name('home');
 
-// Route::get('/', function () {
-//     return view('home');
-// });
-
 Route::get('/checkroom', 'App\Http\Controllers\RoomController@index')->name('checkroom');
 
 Route::get('/reservation', 'App\Http\Controllers\ReservationController@index')->name('reservation');

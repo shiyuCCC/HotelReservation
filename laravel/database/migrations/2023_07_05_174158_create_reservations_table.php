@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('room_id');
             $table->char('customer_name', 255);
             $table->char('email', 255);
+            $table->char('phone', 15);
             $table->tinyInteger('num_people');
             $table->date('check_in_date');
             $table->date('check_out_date');

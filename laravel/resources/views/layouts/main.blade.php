@@ -5,7 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="keywords" content="hotel, luxury hotel, best hotel, book hotel, Wander Hotel">
+    <meta name="description"
+        content="Wander Hotel is a luxurious hotel offering the best accommodations. Book now for the best deals.">
+
     <title>Wander Hotel</title>
+    <!-- facebook-->
+    <meta property="og:title" content="Wander Hotel" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.wanderhotel.com/" />
+    <meta property="og:image" content="../public/img/background.jpg" />
+    <meta property="og:description"
+        content="Wander Hotel is a luxurious hotel offering the best accommodations. Book now for the best deals." />
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
     <!-- Font Awesome -->
@@ -25,6 +36,7 @@
     @include('layouts.navbar')
 
     @yield('content')
+    @yield('scripts')
 
     @include('layouts.footer')
 

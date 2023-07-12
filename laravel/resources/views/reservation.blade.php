@@ -15,6 +15,7 @@
                     <th scope="col">Room id</th>
                     <th scope="col">Customer</th>
                     <th scope="col">Email</th>
+                    <th scope='col'>Phone</th>
                     <th scope="col">Number of people</th>
                     <th scope="col">Check in date</th>
                     <th scope="col">Check out date</th>
@@ -30,6 +31,7 @@
                         <td>{{ $reservation->room_id }}</td>
                         <td>{{ $reservation->customer_name }}</td>
                         <td>{{ $reservation->email }}</td>
+                        <td>{{ $reservation->phone }}</td>
                         <td>{{ $reservation->num_people }}</td>
                         <td>{{ $reservation->check_in_date }}</td>
                         <td>{{ $reservation->check_out_date }}</td>
@@ -43,16 +45,9 @@
                                 action="{{ route('delete', $reservation->id) }}" style="display:none;">
                                 {{ csrf_field() }}
                                 {{ method_field('delete') }}
+                                <!-- equals <input type="hidden" name="_method" value="delete"> (Method spoofing) to work around the limitaions of HTML -->
                             </form>
-                            <button
-                                onclick="
-                    if(confirm('Are you sure to delete this data?')){
-                        event.preventDefault(); 
-                        document.getElementById('delete-form-{{ $reservation->id }}')
-                        .submit();
-                        }else{
-                            event.preventDefault();
-                        }"
+                            <button onclick="confirmAndSubmit({{ $reservation->id }})"
                                 class="btn btn-raised btn-danger btn-sm" href="{{ route('delete', $reservation->id) }}"><i
                                     class="bi bi-trash-fill"></i></button>
                         </td>
@@ -66,4 +61,17 @@
 
         <div class="row"> {{ $reservations->links() }}</div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        function confirmAndSubmit(id) {
+            if (confirm('Are you sure to delete this data?')) {
+                event.preventDefault();
+                document.getElementById('delete-form-' + id).submit();
+            } else {
+                event.preventDefault();
+            }
+        }
+    </script>
 @endsection

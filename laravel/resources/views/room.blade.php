@@ -21,7 +21,7 @@
                                     <div>Capacity: {{ $room->capacity }} people</div>
                                 </div>
                             </div>
-                            <!-- Product actions-->
+                            <!-- Book actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto"
                                         href="{{ route('create', $room->id) }}">BOOK</a>
