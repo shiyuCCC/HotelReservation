@@ -33,7 +33,10 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: antiquewhite;">
         © 2023 Copyright:
-        <a class="text-reset fw-bold" href="#">wanderhotel.com</a>
+        <a class="text-reset fw-bold" href="#">wanderhotel.com</a><br>
+        <small>Address: 123 Saint Laurent Blvd,Montreal, QC H2Y 1Y2,Canada | Phone: 232-342-1790 |
+            Email:info@wanderhotel.com</small>
+
     </div>
     <!-- Copyright -->
 </footer>

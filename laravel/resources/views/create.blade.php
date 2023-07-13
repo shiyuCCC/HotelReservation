@@ -9,7 +9,7 @@
                 </div>
             @endforeach
         @endif
-        <h2 class="text-center">Book Room Page</h2>
+        <h2 class="text-center mb-4">Book Room Page</h2>
 
         <!-- Check weather form-->
         <form action="{{ route('checkweather') }}" method="GET">

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
     <div class="container">
-        <h2>Room Lists</h2>
+        <h2 class="text-center">Room Lists</h2>
         @if (session('successMsg'))
             <div class="alert alert-success" role="alert">
                 {{ session('successMsg') }}

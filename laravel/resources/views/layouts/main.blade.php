@@ -10,13 +10,19 @@
         content="Wander Hotel is a luxurious hotel offering the best accommodations. Book now for the best deals.">
 
     <title>Wander Hotel</title>
-    <!-- facebook-->
+    <!-- facebook & instagram-->
     <meta property="og:title" content="Wander Hotel" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.wanderhotel.com/" />
     <meta property="og:image" content="../public/img/background.jpg" />
     <meta property="og:description"
         content="Wander Hotel is a luxurious hotel offering the best accommodations. Book now for the best deals." />
+
+    <!-- google snippet -->
+    <meta itemprop="name" content="Wander Hotel">
+    <meta itemprop="description"
+        content="Wander Hotel is a luxurious hotel offering the best accommodations. Book now for the best deals.">
+    <meta itemprop="image" content="../public/img/background.jpg">
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
     <!-- Font Awesome -->
