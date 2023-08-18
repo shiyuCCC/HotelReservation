@@ -19,7 +19,7 @@ class RoomController extends Controller
                 ->where('check_out_date', '>=', $startDate);
         })->pluck('room_id');
 
-        //get rooms that are not in the booked_room_ides array
+        //get rooms that are not in the booked_room_ids array
         $available_rooms = Room::whereNotIn('id', $booked_room_ids)->get();
 
         return view('room', ['rooms' => $available_rooms]);
